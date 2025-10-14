@@ -114,6 +114,7 @@ Create the `templates` directory and `index.html` file:
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>Flask Hostname Display</title>
     <style>
         body {
@@ -237,6 +238,15 @@ docker login
 # Push the image
 docker push your-docker-namespace/flask-hostname-app:latest
 ```
+
+### Step 3: Load Image in Minikube Registry (Alternative)
+
+Load your image into the local registry of minikube:
+
+```bash
+Minikube image load your-docker-namespace/flask-hostname-app:latest
+```
+
 
 ### Step 4: Update Kubernetes Manifests
 
