@@ -17,6 +17,7 @@ spec:
       containers:
       - name: flask-hostname-app
         image: your-docker-namespace/flask-hostname-app:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
         env:
